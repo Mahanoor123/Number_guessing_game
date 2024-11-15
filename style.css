@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background: url("./assets/background2.jpeg") center center no-repeat;
+  background-size: cover;
+  color: aliceblue;
+  font-size: 1.2rem;
+}
+.game_container {
+  height: auto;
+  width: 50vw;
+  margin: 3rem auto;
+  background-color: #ffb84dcb;
+  border-radius: 1rem;
+  box-shadow: 2px -2px 8px 1px #bbbbbb;
+  backdrop-filter: (20px);
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.7rem;
+  color: rgb(0, 7, 99);
+  text-shadow: 1px 1px 4px rgb(255, 255, 255);
+}
+.game_container .user_levels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game_container .user_levels label {
+  color: rgb(0, 7, 99);
+}
+.game_container .user_levels select {
+  border: none;
+  outline: none;
+  padding: 0.4rem 1rem;
+  margin: 1rem 0;
+  border: 0.2rem;
+}
+.game_container .start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game_container .start button {
+  all: unset;
+  border-radius: 1.2rem;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+  background-color: rgb(0, 7, 99);
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.5s linear;
+
+  &:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 7, 99);
+  }
+}
+#level_text {
+  text-align: center;
+  margin: 1rem 6rem;
+  text-shadow: 1px 1px 4px rgb(0, 7, 99);
+  font-size: 1.5rem;
+  display: none;
+}
+.input_number {
+  width: 32vw;
+  margin: 1.5rem auto;
+  display: block;
+}
+#userNumber {
+  all: unset;
+  width: 100%;
+  border: 2px solid white;
+  padding: 0.5rem;
+  border-radius: 1.2rem;
+}
+#userNumber::placeholder {
+  color: white;
+  font-size: 0.9rem;
+}
+.input_number button {
+  all: unset;
+  width: 40%;
+  margin: 1.2rem 0.2rem;
+  border-radius: 1.2rem;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.5s linear;
+}
+#guess_btn {
+  background-color: rgb(0, 7, 99);
+  color: #ffffff;
+
+  &:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 7, 99);
+  }
+}
+#reset_game {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 7, 99);
+
+  &:hover {
+    background-color: rgb(0, 7, 99);
+    color: #ffffff;
+  }
+}
+#result_display {
+  margin: 1rem auto;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+#result_display img {
+  width: 6rem;
+}
+#attempts {
+  font-size: 1rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .game_container {
+    height: auto;
+    width: 80vw;
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .game_container {
+    height: 88vh;
+    width: 80vw;
+    margin: 1rem auto;
+  }
+  h1 {
+    padding: 0.2rem;
+  }
+  .input_number {
+    width: 50vw;
+    margin: 0.5rem auto;
+  }
+  .input_number button {
+    all: unset;
+    width: 35%;
+    margin: 0.5rem 0.3rem;
+    border-radius: 1.2rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .game_container {
+    height: 100vh;
+    width: 90vw;
+    margin: 1rem auto;
+  }
+  h1 {
+    font-size: 1.5rem;
+    padding: 0.2rem;
+  }
+  p {
+    margin: 1rem;
+    font-size: 1rem;
+  }
+  .input_number {
+    width: 70vw;
+    margin: 0.5rem auto;
+  }
+  .input_number button {
+    all: unset;
+    width: 80%;
+    text-align: center;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 1.2rem;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}

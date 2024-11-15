@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+<title>Number Guessing Game</title>
+</head>
+<body>
+
+<div class="game_container">
+    <h1>Guess Number game <img src="./assets/num_game.png" width="100px"></h1>
+
+    <div class="user_levels">
+        <label>Choose your game levels:</label>
+        <select id="gameLevels">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
+
+    <div class="start">
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <p id="level_text">I'm thinking of a number between <span id="numberRange"></span> , can you guess it?</p>
+    <div class="input_number">
+        <input type="number" placeholder="Enter your number: " id="userNumber">
+        <button id="guess_btn" onclick="userGuessCheck()">Submit Guess</button>
+        <button id="reset_game" onclick="resetGame()">Reset Game</button>
+    </div>
+
+    <div id="result_display">
+    </div>
+
+    <p id="attempts">Attempts left: <span id="attempts-left"></span></p>
+</div>
+
+
+
+<script src="./index.js"></script>
+</body>
+</html>
